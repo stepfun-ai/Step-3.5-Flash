@@ -1,16 +1,16 @@
-# Cookbooks for Step 3.5 Fast
+# Cookbooks for Step 3.5 Flash
 
-Welcome to the Step 3.5 Fast Cookbooks! This directory contains a collection of practical examples, recipes, and guides to help you get the most out of the Step 3.5 Fast reasoning model.
+Welcome to the Step 3.5 Flash Cookbooks! This directory contains a collection of practical examples, recipes, and guides to help you get the most out of the Step 3.5 Flash reasoning model.
 
 ## 📚 What is a Cookbook?
 
-A cookbook is a self-contained project, integration guide, or example that demonstrates how to solve a specific problem or implement a feature using Step 3.5 Fast. 
+A cookbook is a self-contained project, integration guide, or example that demonstrates how to solve a specific problem or implement a feature using Step 3.5 Flash. 
 
-Whether it's a simple API integration, a guide on connecting with frameworks like LangChain/LlamaIndex, a complex reasoning agent, or a data processing pipeline, cookbooks are designed to be hands-on and easy to follow. We encourage you to add **Integration Guides** here as well, as they serve as excellent "recipes" for developers connecting Step 3.5 Fast with their existing tools.
+Whether it's a simple API integration, a guide on connecting with frameworks like LangChain/LlamaIndex, a complex reasoning agent, or a data processing pipeline, cookbooks are designed to be hands-on and easy to follow. We encourage you to add **Integration Guides** here as well, as they serve as excellent "recipes" for developers connecting Step 3.5 Flash with their existing tools.
 
 ## 🚀 How to Add a Cookbook
 
-We welcome contributions! If you've built something cool with Step 3.5 Fast, please share it with the community.
+We welcome contributions! If you've built something cool with Step 3.5 Flash, please share it with the community.
 
 1.  **Create a New Directory**: Inside the `cookbooks` folder, create a new directory named after your topic. Use `kebab-case` (e.g., `advanced-reasoning-agent`, `rag-implementation`).
 2.  **Add Your Code**: Include all necessary source code. Python scripts (`.py`) or Jupyter Notebooks (`.ipynb`) are preferred.
