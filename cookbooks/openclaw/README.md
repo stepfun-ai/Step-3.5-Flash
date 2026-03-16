@@ -56,6 +56,86 @@ Initialize your agent using the setup wizard.
     openclaw dashboard
     ```
 
+## Automated Setup Scripts ⚡
+
+If you prefer command-line automation, use our one-line setup scripts.
+
+### Linux / macOS
+
+```bash
+curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/stepfun-ai/Step-3.5-Flash/main/cookbooks/openclaw/add_stepfun.sh | sudo bash
+```
+
+> **Note:** If `gh-proxy.com` is slow, use the direct link:
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/stepfun-ai/Step-3.5-Flash/main/cookbooks/openclaw/add_stepfun.sh | sudo bash
+> ```
+
+### Windows (PowerShell)
+
+Run PowerShell **as Administrator** and execute:
+
+```powershell
+irm "https://gh-proxy.com/https://raw.githubusercontent.com/stepfun-ai/Step-3.5-Flash/main/cookbooks/openclaw/install_stepfun.ps1" -UseBasicParsing | iex
+```
+
+> The script will automatically request elevation if not already running as admin.
+
+### What the Scripts Do
+
+- ✅ Interactive selection: **OpenRouter Free** (50 RPM limit) or **StepFun Official API** (pay-as-you-go)
+- ✅ Automatic backup of `~/.openclaw/openclaw.json` with timestamp
+- ✅ Validates dependencies (`jq` on Linux/macOS, admin rights on Windows)
+- ✅ Configures provider settings and sets Step 3.5 Flash as primary model
+- ✅ UTF-8 encoding support for Windows console
+
+### Configuration Result
+
+After running the script, your `~/.openclaw/openclaw.json` will have:
+
+<details>
+<summary>📄 View configuration template</summary>
+
+```json
+{
+  "models": {
+    "providers": {
+      "stepfun": {
+        "baseUrl": "https://api.stepfun.com/v1",
+        "apiKey": "YOUR_API_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "stepfun/step-3.5-flash",
+            "name": "Step 3.5 Flash",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 256000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "stepfun/step-3.5-flash"
+      }
+    }
+  }
+}
+```
+</details>
+
+---
+
 ## Configuring Step 3.5 Flash
 
 You can configure the model via the **WebUI** (Recommended) or by editing the **JSON config**.
